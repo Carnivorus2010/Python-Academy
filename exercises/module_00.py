@@ -1,7 +1,8 @@
 # module_00.py
 # a small program that collects, classifies, validates and prints your name and age.
 
-print(f"module_00 __name__ = {__name__!r}")
+# print statement to confirm __main__
+# print(f"module_00 __name__ = {__name__!r}")
 
 def read_age():
     age_text = input("How old are you? ")
