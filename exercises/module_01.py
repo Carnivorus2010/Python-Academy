@@ -9,15 +9,26 @@ TOKENS = {
 
 def token_names(tokens: dict[str, str]) -> list[str]:
     """Return token names sorted alphabetically."""
-    raise NotImplementedError
+    return sorted(tokens.keys())
 
 def format_tokens(tokens: dict[str, str]) -> list[str]:
     """Return sorted strings in the form NAME=VALUE."""
-    raise NotImplementedError
+    formatted = []
+
+    for name in token_names(tokens):
+        formatted.append(f"{name}={tokens[name]}")
+
+    return formatted
 
 def accent_tokens(tokens: dict[str, str]) -> dict[str, str]:
     """Return only tokens whose names begin with accent_."""
-    raise NotImplementedError
+    accent_only = {}
+
+    for name in token_names(tokens):
+        if name.startswith("accent_"):
+            accent_only.update({name: tokens[name]})
+
+    return accent_only
 
 if __name__ == "__main__":
     for line in format_tokens(TOKENS):
