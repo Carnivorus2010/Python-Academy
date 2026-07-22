@@ -9,4 +9,5 @@ Requirements:
 - reject malformed hex colors
 - exit nonzero when invalid values are found
 
-Stretch goals: `--category`, `--json`, and verbose output.
+Stretch goals: `--category`, `--json`, and
+verbose output.
